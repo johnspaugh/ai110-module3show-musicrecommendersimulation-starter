@@ -33,6 +33,43 @@ PROFILES = {
         "target_acousticness": 0.75,
         "target_tempo_bpm": 80,
     },
+    "deep intense rock": {
+        "favorite_genre": "rock",
+        "favorite_mood": "intense",
+        "target_energy": 0.92,
+        "target_valence": 0.45,
+        "target_danceability": 0.65,
+        "target_acousticness": 0.10,
+        "target_tempo_bpm": 150,
+    },
+    # Adversarial profiles: built to trick or confuse the scoring logic
+    "ADVERSARIAL: sad but high energy (genre/mood not in catalog)": {
+        "favorite_genre": "blues",
+        "favorite_mood": "sad",
+        "target_energy": 0.90,
+        "target_valence": 0.15,
+        "target_danceability": 0.50,
+        "target_acousticness": 0.90,
+        "target_tempo_bpm": 70,
+    },
+    "ADVERSARIAL: classical at the gym (labels vs. sound conflict)": {
+        "favorite_genre": "classical",
+        "favorite_mood": "euphoric",
+        "target_energy": 0.95,
+        "target_valence": 0.90,
+        "target_danceability": 0.90,
+        "target_acousticness": 0.95,
+        "target_tempo_bpm": 128,
+    },
+    "ADVERSARIAL: dead center (every target 0.5, no genre/mood fit)": {
+        "favorite_genre": "none",
+        "favorite_mood": "none",
+        "target_energy": 0.50,
+        "target_valence": 0.50,
+        "target_danceability": 0.50,
+        "target_acousticness": 0.50,
+        "target_tempo_bpm": 100,
+    },
 }
 
 
